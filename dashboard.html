@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>ניהול כספים אישי</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>חשבון אישי</h1>
+    <p>יתרה כוללת: <span id="balance">טוען...</span></p>
+    <p>פעולה אחרונה: <span id="last-transaction">טוען...</span></p>
+    <h2>הוסף פעולה חדשה</h2>
+    <div id="step1">
+      <label>בחר סוג פעולה:</label>
+      <button onclick="selectType('הכנסה')">הכנסה</button>
+      <button onclick="selectType('הוצאה')">הוצאה</button>
+    </div>
+    <div id="step2" style="display:none;">
+      <label>סכום:</label>
+      <input type="number" id="amount">
+      <button onclick="nextStep2()">המשך</button>
+    </div>
+    <div id="step3" style="display:none;">
+      <label>סיבת הפעולה:</label>
+      <input type="text" id="reason">
+      <button onclick="nextStep3()">המשך</button>
+    </div>
+    <div id="step4" style="display:none;">
+      <label>בחר תאריך:</label>
+      <input type="date" id="date">
+      <button onclick="saveTransaction()">שמור</button>
+    </div>
+    <button onclick="logout()">יציאה</button>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
